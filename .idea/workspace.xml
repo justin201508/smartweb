@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2004a6d9-4da4-4679-8b88-ddd2bd1b877d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartweb.iml" afterPath="$PROJECT_DIR$/smartweb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/ConfigHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/ConfigHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/FrameworkConstant.java" afterPath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/FrameworkConstant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/annotation/Action.java" afterPath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/annotation/Action.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/annotation/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/annotation/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/annotation/Inject.java" afterPath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/annotation/Inject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/annotation/Service.java" afterPath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/annotation/Service.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/helper/ManagedClassHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/helper/ManagedClassHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/util/CastUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/util/CastUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/util/ClassUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/util/ClassUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/util/CollectionUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/util/CollectionUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/util/PropsUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/util/PropsUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/util/StringUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/util/StringUtil.java" />
-    </list>
+    <list default="true" id="2004a6d9-4da4-4679-8b88-ddd2bd1b877d" name="Default" comment="" />
     <ignored path="smartweb.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -139,8 +121,8 @@
       <file leaf-file-name="Inject.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/annotation/Inject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+            <state relative-caret-position="220">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -982,8 +964,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arcvideo/smartweb/framework/annotation/Inject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        <state relative-caret-position="220">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
