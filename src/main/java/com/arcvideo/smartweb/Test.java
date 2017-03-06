@@ -5,6 +5,6 @@ package com.arcvideo.smartweb;
  */
 public class Test {
     public static void main(String[] args) {
-        System.out.println("Hello,smartweb!");
+        System.out.println("Hello,smartweb!,for my beautiful code!");
     }
 }
