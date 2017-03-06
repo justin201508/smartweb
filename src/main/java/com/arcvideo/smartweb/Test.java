@@ -1,7 +1,7 @@
 package com.arcvideo.smartweb;
 
 /**
- * Created by st on 2017/3/6.
+ * Created by st@arcvideo.com on 2017/3/6.
  */
 public class Test {
     public static void main(String[] args) {
