@@ -1,0 +1,90 @@
+[[关于Spring Framework的AOP]]
+
+AOP 框架其实可以看成是一个拦截器框架。但是这个拦截器似乎非常武断，比如说它拦截了一个类，就拦截了类的所有的方法。
+类似的，我们使用动态代理的时候，也遇到了同样的问题。需要的代码中对这些方法进行过滤，才能过滤出需要拦截的方法，这似乎不太优雅。
+
+这就引入了在AOP中的另外一个核心概念：切面。Advisor,它也是AOP的核心，也是我们关注的焦点。
+比如正则表达式的切面:
+org.springframework.aop.support.RegexMethodPointcutAdvisor
+=>
+<property name="pattern" value="aop.demo.GreetingImpl.good.*"/>
+
+=>
+<property name="interceptorNames" value="greetingAdvisor"/>
+从这里可以看出，拦截器已经不是一个enhance(增强)了，而是一个Advice(切面),其目的是为了只对满足切点匹配条件的方法进行拦截
+
+
+Spring AOP的自动扫描和enhance
+<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+    <property name="beanNames" value="*Impl"/>
+    <property name="interceptorNames" value="greetingAroundAdvice"/>
+    <property name="optimize" value="true"/>
+</bean>
+
+
+定义切面
+<bean id="" class="org.springframework.aop.support.RegexMethodPointcutAdvisor">
+    <property name="pattern" value="aop.demo.GreetingImpl.good.*"/>
+    <property name="advice" value="greetingAroundAdvice"/>
+</bean>
+
+自动生成切点，自动扫描所有的切面类，并为其自动生成代理
+<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreattor">
+    <property name="optimzie" value="true"/>
+</bean>
+
+==>
+Spring + ASPECTJ
+[[Rod Johnson - SPRING]]
+将ASPECTJ与SPRING集成，与直接使用ASPECTJ是不同的，我们不需要定义ASPECT类，只需要使用ASPECTJ的切点表达式即可
+
+
+SO EASY
+<beans>
+    <!--自动扫描的包路径是com.demo-->
+    <context:component-scan base-package="com.demo"/>
+    <!-- 通过aspectj自动生成代理类，proxy-target-class的默认值是false,默认只代理interface，这里要注意 -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+</beans>
+
+
+
+// 这里定义了一个切面，可以由spring自动为指定的类生成动态代理
+// 可以很明显的看出，这个使用的MethodInterceptor
+@Aspect
+@Component
+public class GreetingAspect{
+
+    //定义注入哪个目标类，以及切点
+    @Around("execute(* aop.demo.GreetingImpl.*(..))")
+    public Object around(ProceedingJoinPoint pjp) throw Throwable{
+        before();
+        Object result = pjp.proceed()
+        after();
+        return result;
+    }
+
+    public void before(){};
+    public void after(){};
+}
+
+execute() 表示拦截方法
+第一个*表示方法的返回值是任意的
+第二个*表示匹配该类中的所有的方法
+(..)表示方法的参数是任意的
+
+
+@Before 前置增强
+@After 后置增强
+@Around 环绕增强
+@AfterThrowing 抛出增强
+
+//为指定的类，指定引入实现的接口，你在运行时可以将其转换为引入的接口，就好像你引入了一个新接口一样
+@DeclareParents 引入增强
+
+Greeting greeting = (Greeting)context.getBean("greetingImpl");
+greeting.sayHello("suntao");
+
+//引入的实现
+Apology apy = (Apology)greeting;
+apy.saySorry("suntao");

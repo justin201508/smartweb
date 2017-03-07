@@ -13,4 +13,9 @@ public class HelloImpl implements Hello{
     public void sayGoodBye(String name) {
         System.out.println("Goodbye," + name);
     }
+
+    @Override
+    public void sayYes(String name) {
+        System.out.println("Yes," + name);
+    }
 }

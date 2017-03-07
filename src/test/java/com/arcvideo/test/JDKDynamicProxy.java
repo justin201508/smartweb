@@ -7,11 +7,11 @@ import java.lang.reflect.Proxy;
 /**
  * Created by st@arcvideo.com on 2017/3/7.
  */
-public class DynamicProxy implements InvocationHandler {
+public class JDKDynamicProxy implements InvocationHandler {
 
     private Object target;
 
-    public DynamicProxy(Object target){
+    public JDKDynamicProxy(Object target){
         this.target = target;
     }
 
@@ -43,7 +43,7 @@ public class DynamicProxy implements InvocationHandler {
         Hello target = new HelloImpl();
 
         //把拦截的代码放在动态代理里
-        DynamicProxy dynamicProxy = new DynamicProxy(target);
+        JDKDynamicProxy dynamicProxy = new JDKDynamicProxy(target);
 
         //通过被代理类的类加载器和接口，重建一个接口的实现类
         //ASPECT逻辑代码就定义在这里
