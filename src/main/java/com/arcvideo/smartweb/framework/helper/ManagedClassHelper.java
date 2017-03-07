@@ -21,7 +21,7 @@ public class ManagedClassHelper {
 
     static{
         String basePackage = ConfigHelper.getAppBasePack();
-        CLASS_SET = ClassUtil.getClasses(basePackage);
+        CLASS_SET = ClassUtil.loadClasses(basePackage);
     }
 
     public static Set<Class<?>> getClassSet(){

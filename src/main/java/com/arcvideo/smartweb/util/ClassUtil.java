@@ -39,7 +39,7 @@ public class ClassUtil {
         return cls;
     }
 
-    public static Set<Class<?>> getClasses(String packageName){
+    public static Set<Class<?>> loadClasses(String packageName){
         Set<Class<?>> classes = new HashSet<Class<?>>();
         try {
             final Enumeration<URL> urls = getClassLoader().getResources(packageName.replace(".", "/"));
