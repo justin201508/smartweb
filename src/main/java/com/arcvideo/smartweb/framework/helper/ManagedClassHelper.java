@@ -5,6 +5,7 @@ import com.arcvideo.smartweb.framework.annotation.Controller;
 import com.arcvideo.smartweb.framework.annotation.Service;
 import com.arcvideo.smartweb.util.ClassUtil;
 
+import java.lang.annotation.Annotation;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -66,4 +67,38 @@ public class ManagedClassHelper {
         classSet.addAll(getServiceClassSet());
         return classSet;
     }
+
+
+    /**
+     * 从托管类里获取指定类的子类集合
+     *
+     * @param superClass
+     * @return
+     */
+    public static Set<Class<?>> getClassSetBySuper(Class<?> superClass){
+        Set<Class<?>> classSet = new HashSet<Class<?>>();
+        for(Class<?> cls : CLASS_SET){
+            if(superClass.isAssignableFrom(cls) && !superClass.equals(cls)){
+                classSet.add(cls);
+            }
+        }
+        return classSet;
+    }
+
+    /**
+     * 获取托管类中带有指定ANNOTATION的类的集合
+     * @param annotationClass
+     * @return
+     */
+    public static Set<Class<?>> getClassSetByAnntation(Class<? extends Annotation> annotationClass){
+        Set<Class<?>> classSet = new HashSet<Class<?>>();
+        for(Class<?> cls : CLASS_SET){
+            if(cls.isAnnotationPresent(annotationClass)){
+                classSet.add(cls);
+            }
+        }
+        return classSet;
+    }
+
+
 }

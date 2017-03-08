@@ -71,6 +71,14 @@
             <version>4.2.0.RELEASE</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- CGLIB -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.2.5</version>
+        </dependency>
+
     </dependencies>
 
     <build>

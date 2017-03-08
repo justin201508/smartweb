@@ -5,6 +5,6 @@ package com.arcvideo.smartweb.framework.proxy;
  */
 public interface Proxy {
 
-    void doProxy(ProxyChain proxyChain);
+    Object doProxy(ProxyChain proxyChain) throws Throwable;
 
 }
