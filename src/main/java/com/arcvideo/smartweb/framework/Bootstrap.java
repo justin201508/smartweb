@@ -2,6 +2,7 @@ package com.arcvideo.smartweb.framework;
 
 import com.arcvideo.smartweb.framework.helper.ControllerHelper;
 import com.arcvideo.smartweb.framework.helper.ManagedClassHelper;
+import com.arcvideo.smartweb.util.AopHelper;
 import com.arcvideo.smartweb.util.BeanHelper;
 import com.arcvideo.smartweb.util.ClassUtil;
 import com.arcvideo.smartweb.util.IocHelper;
@@ -15,9 +16,10 @@ public class Bootstrap {
     public static void init(){
         Class<?>[] helperClasses = {
                 ManagedClassHelper.class,
+                ControllerHelper.class,
                 BeanHelper.class,
                 IocHelper.class,
-                ControllerHelper.class
+                AopHelper.class
         };
 
         // load classes to finish framework init
